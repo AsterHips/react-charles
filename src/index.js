@@ -3,24 +3,30 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import './index.css';
+import './sass/index.scss';
 import App from './App';
-import Home from './pages/Home/Home';
-import Login from './pages/Login/Login';
+import Home from './pages/Home';
+import Logement from './pages/Logement';
+import Error404 from './pages/404';
+import A_propos from './pages/A_propos';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <div>Page erreur</div>,
+    errorElement: <Error404 />,
     children: [
       {
         path: '/',
         element: <Home />,
       },
       {
-        path: '/login',
-        element: <Login />,
+        path: '/logement/:id',
+        element: <Logement />,
+      },
+      {
+        path: '/A_propos',
+        element: <A_propos />,
       },
     ],
   },

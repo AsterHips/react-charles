@@ -1,0 +1,18 @@
+nav {
+    & ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+
+        & li a {
+            text-decoration: none;
+            color: #ff6060;
+
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+    }
+}

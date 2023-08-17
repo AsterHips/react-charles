@@ -1,0 +1,25 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
+    color: $main-color;
+
+    & span {
+        font-size: 288px;
+        font-weight: 700;
+    }
+
+    & p {
+        font-size: 36px;
+        font-weight: 500;
+    }
+
+    & a {
+        text-decoration: underline;
+        cursor: pointer;
+        color: $main-color;
+    }
+}

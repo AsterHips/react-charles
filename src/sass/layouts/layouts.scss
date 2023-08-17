@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    justify-content: space-between;
+
+    & img {
+        height: 68px;
+        width: 210.32px;
+    }
+}
+
+footer {
+    height: 209px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  
+    & img {
+      height: 39.44px;
+      width: 122px;
+    }
+  }
+  
