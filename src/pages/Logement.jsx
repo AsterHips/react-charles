@@ -3,9 +3,6 @@ import Tags from "../components/Tags"
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 
-
-let index = 0;
-
 function Logement() {
 
   const [appart, setAppart] = useState([])
@@ -20,6 +17,8 @@ function Logement() {
     
     setAppart(found)  
   }
+
+  console.log(appart)
 
 getHouse();
 }, [id]);
@@ -41,7 +40,6 @@ getHouse();
                         ></img>
                     </div>
                 </div>
-                <div className="dropdowns"></div>
             <Tags />
             </div>
         </>
