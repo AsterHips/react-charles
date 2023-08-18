@@ -18,13 +18,13 @@ function Logement() {
     setAppart(found)  
   }
 
-  console.log(appart)
-
-getHouse();
+  
+  getHouse();
 }, [id]);
 
-   return (
-        <>
+console.log(appart.host.name)
+return (
+  <>
         <Carroussel />
             <div className="details">
                 <div className="infos">
@@ -44,6 +44,6 @@ getHouse();
             </div>
         </>
     );
-}
-
+  }
+  
 export default Logement;
