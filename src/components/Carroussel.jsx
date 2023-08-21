@@ -4,48 +4,54 @@ import arrow_right from "../assets/sources_images/arrow_right.png";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 
-
 let index = 0;
 
-function Logement() {
+function Carroussel(appart) {
+    // console.log(appart)
+    // console.log(appart.appart.pictures);
 
-  const [appart, setAppart] = useState([])
-  const id = useParams().id;
+    const [pictures, setPictures] = useState([]);
 
-  useEffect(() => {
-  const getHouse = async () => {
-    const response =  await fetch('../logements.json')
-    const data = await response.json()
+    useEffect(() => {
+        const getPictures = () => {
+            setPictures(appart.appart.pictures);
+        };
+        getPictures();
+    });
 
-    const found = data.find((appart) => appart.id === id );
-    
-    setAppart(found)  
-  }
+    // console.log(pictures);
+    // console.log(pictures.length)
 
-getHouse();
-}, [id]);
+    function DisplayPicture(picture) {
+        return <img src={picture}></img>;
+    }
 
-   return (
-            <div id="gallery-logement">
-                <img
-                    src={arrow_left}
-                    alt="fleche gauche"
-                    className="arrow arrow_left"
-                />
-                <img src={Logement_img} alt="Photo du logement"></img>
-                <img
-                    src={arrow_right}
-                    alt="fleche droite"
-                    className="arrow arrow_right"
-                />
-                <span className="pages">{index}/{Number(index.length-1)}</span>
-            </div>
+    function PicturesList(picture) {
+      console.log(pictures)
+        const displayPicture = pictures.map((picture) => (
+            <DisplayPicture key={index} picture={picture} />
+        ));
+    }
+
+    return (
+        <div id="gallery-logement">
+            <img
+                src={arrow_left}
+                alt="fleche gauche"
+                className="arrow arrow_left"
+            />
+            <PicturesList />
+            <img
+                src={arrow_right}
+                alt="fleche droite"
+                className="arrow arrow_right"
+            />
+            <span className="pages">
+                {index}/{Number(appart.length - 1)}
+            </span>
+        </div>
     );
 }
-
-// const bannerImageElement = document.querySelector('.banner-img');
-// const arrowLeftElement = document.querySelector('.arrow_left');
-// const arrowRightElement = document.querySelector('.arrow_right');
 
 // arrowRightElement.addEventListener('click', () => {
 
@@ -66,4 +72,4 @@ getHouse();
 //   bannerImageElement.src = `./assets/images/logementshow/${logements[index].image}`;
 // });
 
-export default Logement;
+export default Carroussel;

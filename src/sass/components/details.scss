@@ -1,34 +1,52 @@
-.details {
+.infos {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    color: $main-color;
 
-    & .infos {
+    & .titre_tags {
         display: flex;
-        justify-content: space-between;
-        color: $main-color;
+        flex-direction: column;
+        max-width: 75%;
+        padding-top: 25px;
+        padding-bottom: 25px;
 
-        & h1 {
-            font-size: 36px;
+        & .titre_logement {
+            padding-bottom: 10px;
+
+            & h1 {
+                font-size: 36px;
+            }
+
+            & p {
+                font-size: 18px;
+            }
         }
     }
 
-    & .proprietaire {
+    & .prop_stars {
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        padding-top: 25px;
+        padding-bottom: 25px;
 
-        & p {
-            font-size: 18px;
+        & .proprietaire {
             display: flex;
-            width: 120px;
-            flex-wrap: wrap;
             align-items: center;
-            justify-content: right;
-        }
 
-        & img {
-            border-radius: 50px;
-            width: 64px;
-            height: 64px;
+            & p {
+                font-size: 18px;
+                display: flex;
+                width: 120px;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: right;
+            }
+
+            & img {
+                border-radius: 50px;
+                width: 64px;
+                height: 64px;
+            }
         }
     }
 }

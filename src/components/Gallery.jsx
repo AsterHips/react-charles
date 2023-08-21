@@ -1,10 +1,12 @@
 import Card from "./Card";
 
-function Gallery({apparts}) {
+function Gallery({ apparts }) {
     return (
-            <div className="gallery">
-                {apparts.map(appart => <Card appart={appart} key={appart.id} />)}
-            </div>
+        <div className="gallery">
+            {apparts.map((appart) => (
+                <Card appart={appart} key={appart.id} />
+            ))}
+        </div>
     );
 }
 
