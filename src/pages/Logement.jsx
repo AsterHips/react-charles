@@ -23,6 +23,7 @@ function Logement() {
         
     }, [id]);
 
+    console.log(appart)
 
     return (
         <>

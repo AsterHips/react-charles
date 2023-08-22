@@ -1,36 +1,26 @@
 import Logement_img from "../assets/sources_images/Logement.png";
 import arrow_left from "../assets/sources_images/arrow_left.png";
 import arrow_right from "../assets/sources_images/arrow_right.png";
-import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 
 let index = 0;
 
-function Carroussel(appart) {
-    // console.log(appart)
-    // console.log(appart.appart.pictures);
+function Carroussel({appart}) {
 
-    const [pictures, setPictures] = useState([]);
+    const pictures = appart.pictures;
 
-    useEffect(() => {
-        const getPictures = () => {
-            setPictures(appart.appart.pictures);
-        };
-        getPictures();
-    });
+    console.log(pictures)
 
-    // console.log(pictures);
-    // console.log(pictures.length)
-
-    function DisplayPicture(picture) {
+    function DisplayPicture({picture}) {
         return <img src={picture}></img>;
     }
 
-    function PicturesList(picture) {
+    function PicturesList(pictures) {
       console.log(pictures)
-        const displayPicture = pictures.map((picture) => (
+
+        const displayPicture = pictures.map((picture) => 
             <DisplayPicture key={index} picture={picture} />
-        ));
+        );
     }
 
     return (
@@ -40,14 +30,14 @@ function Carroussel(appart) {
                 alt="fleche gauche"
                 className="arrow arrow_left"
             />
-            <PicturesList />
+            <PicturesList pictures={[...pictures]} />
             <img
                 src={arrow_right}
                 alt="fleche droite"
                 className="arrow arrow_right"
             />
             <span className="pages">
-                {index}/{Number(appart.length - 1)}
+                {/* {index}/{Number(pictures.length-1)} */}
             </span>
         </div>
     );
