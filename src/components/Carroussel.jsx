@@ -3,17 +3,11 @@ import arrow_left from "../assets/sources_images/arrow_left.png";
 import { useEffect, useState } from "react";
 import React from 'react';
 
-const arrowRightElement = document.getElementsByClassName(arrow_right);
-const arrowLeftElement = document.getElementsByClassName(arrow_left);
-
-
 function Carroussel({ appart }) {
     const [index, setIndex] = useState(0);
     const galleryLength = appart.pictures.length;
           
       function NavigateLeft(){
-        console.log(index)
-        console.log({index})
         if (index <=0) {
           setIndex(galleryLength-1);
         } else {
@@ -21,19 +15,13 @@ function Carroussel({ appart }) {
         }
       }
       
-      console.log(index)
-      console.log({index})
-      
       function NavigateRight(){
-        console.log(index)
-        console.log({index})
         if (index >=galleryLength-1) {
           setIndex(0);
         } else {
           setIndex(index + 1);
         }
       }
-
 
     return (
         <div id="gallery-logement">

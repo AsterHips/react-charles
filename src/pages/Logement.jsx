@@ -33,16 +33,16 @@ function Logement() {
             <h1>{appart.title}</h1>
             <p>{appart.location}</p>
           </div>
-          {/* <Tags appart={appart} /> */}
+          <Tags appart={appart} />
         </div>
         <div className="prop_stars">
-          {/* <div className="proprietaire">
+          <div className="proprietaire">
                         <p>{appart.host.name}</p>
                         <img
                             src={appart.host.picture}
                             alt="Photo de profil du propriétaire"
                         ></img>
-                    </div> */}
+                    </div>
           <Stars />
         </div>
       </div>

@@ -2,9 +2,7 @@ import Tag from "./Tag";
 
 function Tags({ appart }) {
 
-    console.log(appart.tags)
-    const tags = [appart.tags]
-    console.log(tags)
+    const tags = appart.tags
 
     return (
         <div className="tags">
@@ -16,6 +14,3 @@ function Tags({ appart }) {
 }
 
 export default Tags;
-
-
-// arr.map(inner => inner.map(obj => <p key={obj.id}>{obj.user}</p>));
