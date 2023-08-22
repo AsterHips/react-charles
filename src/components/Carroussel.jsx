@@ -1,46 +1,27 @@
-import Logement_img from "../assets/sources_images/Logement.png";
-import arrow_left from "../assets/sources_images/arrow_left.png";
-import arrow_right from "../assets/sources_images/arrow_right.png";
-import { useEffect, useState } from "react";
+import Logement_img from '../assets/sources_images/Logement.png';
+import arrow_left from '../assets/sources_images/arrow_left.png';
+import arrow_right from '../assets/sources_images/arrow_right.png';
+import { useEffect, useState } from 'react';
 
-let index = 0;
+function Carroussel({ appart }) {
+  const [index, setIndex] = useState(0);
 
-function Carroussel({appart}) {
-
-    const pictures = appart.pictures;
-
-    console.log(pictures)
-
-    function DisplayPicture({picture}) {
-        return <img src={picture}></img>;
-    }
-
-    function PicturesList(pictures) {
-      console.log(pictures)
-
-        const displayPicture = pictures.map((picture) => 
-            <DisplayPicture key={index} picture={picture} />
-        );
-    }
-
-    return (
-        <div id="gallery-logement">
-            <img
-                src={arrow_left}
-                alt="fleche gauche"
-                className="arrow arrow_left"
-            />
-            <PicturesList pictures={[...pictures]} />
-            <img
-                src={arrow_right}
-                alt="fleche droite"
-                className="arrow arrow_right"
-            />
-            <span className="pages">
-                {/* {index}/{Number(pictures.length-1)} */}
-            </span>
-        </div>
-    );
+  return (
+    <div id="gallery-logement">
+      <img src={arrow_left} alt="fleche gauche" className="arrow arrow_left" />
+      <img
+        src={appart.pictures[index]}
+        alt="gallerie photos"
+        className="gallery-logement-current"
+      />
+      <img
+        src={arrow_right}
+        alt="fleche droite"
+        className="arrow arrow_right"
+      />
+      <span className="pages">{/* {index}/{Number(pictures.length-1)} */}</span>
+    </div>
+  );
 }
 
 // arrowRightElement.addEventListener('click', () => {
