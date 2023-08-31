@@ -1,4 +1,5 @@
 .infos {
+    width: 90vw;
     display: flex;
     justify-content: space-between;
     color: $main-color;
@@ -14,11 +15,11 @@
             padding-bottom: 10px;
 
             & h1 {
-                font-size: 36px;
+                font-size: 2.25em;
             }
 
             & p {
-                font-size: 18px;
+                font-size: 1.1em;
             }
         }
     }
@@ -26,20 +27,25 @@
     & .prop_stars {
         display: flex;
         flex-direction: column;
+        align-items: end;
+        width: 25%;
         padding-top: 25px;
         padding-bottom: 25px;
+        gap: 10px;
 
         & .proprietaire {
             display: flex;
             align-items: center;
+            gap: 10px;
 
             & p {
-                font-size: 18px;
+                font-size: 1.1em;
                 display: flex;
                 width: 120px;
                 flex-wrap: wrap;
                 align-items: center;
                 justify-content: right;
+                text-align: right;
             }
 
             & img {
@@ -48,5 +54,19 @@
                 height: 64px;
             }
         }
+
     }
+}
+
+.star-container {
+    display: flex;
+    gap: 10px;
+}
+
+.fa-star {
+    font-size: 25px;
+}
+
+.grey-star {
+    color: #e3e3e3;
 }

@@ -1,0 +1,40 @@
+
+.dropdowns {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    width: 100%;
+    margin-bottom: 50px;
+
+    & .dropdown {
+        width: 44%;
+
+        & .dropdown_title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+            font-weight: 500;
+            color: white;
+            background-color: $main-color;
+            padding: 10px 20px 10px 10px;
+            border-radius: 10px;
+
+            & i {
+                cursor: pointer;
+                font-size: 1.6em;
+            }
+        }
+
+        & .dropdown_content {
+            background-color: $background;
+            padding: 1.5em;
+            color: $main-color;
+            line-height: 1.5em;
+
+            & li {
+                list-style: none;
+            }
+        }
+    }
+}

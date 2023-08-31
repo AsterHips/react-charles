@@ -1,4 +1,12 @@
-.tags svg {
-    font-size: 18px;
-    color: #ff6060;
+.stars-container {
+    display: flex;
+    gap: 10px;
+}
+
+.fa-star {
+    font-size: 25px;
+}
+
+.grey-star {
+    color: #E3E3E3;
 }

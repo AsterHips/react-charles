@@ -1,8 +1,12 @@
-import Tag from "./Tag";
-
 function Tags({ appart }) {
 
     const tags = appart.tags
+
+    function Tag({ tag }) {
+        return (
+             <span>{tag}</span>
+        );
+    }
 
     return (
         <div className="tags">
