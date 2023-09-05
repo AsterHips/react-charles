@@ -1,21 +1,13 @@
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-  }
-  
-  main {
+}
+
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-
-  // @media (max-width: 767.98px) {
-
-  //   main {
-  //     min-width: 375px;
-  //   }
-  // }
+}

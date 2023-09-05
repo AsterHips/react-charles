@@ -42,9 +42,7 @@ function Carroussel({ pictures }) {
                 className={galleryLength === 1 ? "nope" : "arrow arrow_right"}
                 onClick={NavigateRight}
             />
-            <span 
-            className={galleryLength === 1 ? "nope" : "numerotation"}
-            >
+            <span className={galleryLength === 1 ? "nope" : "numerotation"}>
                 {index + 1}/{pictures.length}
             </span>
         </div>

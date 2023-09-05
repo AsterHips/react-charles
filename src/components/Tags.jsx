@@ -1,11 +1,8 @@
 function Tags({ appart }) {
-
-    const tags = appart.tags
+    const tags = appart.tags;
 
     function Tag({ tag }) {
-        return (
-             <span>{tag}</span>
-        );
+        return <span>{tag}</span>;
     }
 
     return (
