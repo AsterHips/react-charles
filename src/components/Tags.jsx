@@ -11,7 +11,7 @@ function Tags({ appart }) {
     return (
         <div className="tags">
             {tags.map((tag) => (
-                <Tag tag={tag} />
+                <Tag key={tag} tag={tag} />
             ))}
         </div>
     );

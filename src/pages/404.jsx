@@ -2,6 +2,7 @@ import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
 
 function Error404() {
+    document.title = "Erreur404";
     return (
         <>
             <Header />

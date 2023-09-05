@@ -11,22 +11,21 @@ header {
 }
 
 nav {
-  & ul {
-      list-style: none;
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-      gap: 20px;
+    & ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        gap: 20px;
 
-      & li a {
-          text-decoration: none;
-          color: #ff6060;
+        & li a {
+            text-decoration: none;
+            color: #ff6060;
 
-          &:hover {
-              text-decoration-line: underline;
-          }
-      }
-  }
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+    }
 }
 
 .active {
@@ -42,10 +41,27 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 35px;
-  
+
     & img {
-      height: 39.44px;
-      width: 122px;
+        height: 39.44px;
+        width: 122px;
     }
-  }
-  
+}
+
+@media (max-width: 767.98px) {
+    header {
+        padding: 1rem;
+        margin-bottom: 10px;
+
+        & img {
+            max-height: 46.88px;
+            max-width: 145px;
+        }
+    }
+
+    footer {
+        & p {
+            max-width: 133px;
+        }
+    }
+}

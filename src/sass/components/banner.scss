@@ -20,3 +20,24 @@
         color: white;
     }
 }
+
+@media (max-width: 767.98px) {
+
+    .banner {
+        height: 111px;
+
+        & img {
+            border-radius: 10px;
+        }
+
+        & p {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: start;
+            transform: translate(-60%, -50%);
+            width: 70vw;
+            line-height: 24px;
+            font-size: 1.6rem;
+        }
+    }
+}

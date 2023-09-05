@@ -25,6 +25,8 @@ function Logement() {
 
     if (!appart) return <div></div>;
 
+    document.title = appart.title;
+
     return (
         <>
             <Carroussel pictures={appart.pictures} />
@@ -48,8 +50,16 @@ function Logement() {
                 </div>
             </div>
             <div className="dropdowns">
-              <Dropdown dropdownTitle="Description" content={appart.description} />
-              <Dropdown dropdownTitle="Équipements" content={appart.equipments} />
+                <Dropdown
+                    dropdownTitle="Description"
+                    content={appart.description}
+                    id="description"
+                />
+                <Dropdown
+                    dropdownTitle="Équipements"
+                    content={appart.equipments}
+                    id="equipments"
+                />
             </div>
         </>
     );
