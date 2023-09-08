@@ -5,21 +5,17 @@ import { useLocation } from "react-router";
 function Banner() {
     const currentPage = useLocation().pathname;
 
-    function ImageBanniere() {
-        if (currentPage === "/") {
-            return <img src={Banner_img} alt="Bannière"></img>;
-        }
-        if (currentPage === "/A_propos") {
-            return <img src={Banner_about} alt="Bannière"></img>;
-        }
-    }
-
     return (
         <div className="banner">
-            <ImageBanniere />
-            <p>
-                {currentPage === "/" ? "Chez vous, partout et ailleurs" : null}
-            </p>
+            {currentPage === "/" && <img src={Banner_img} alt="Bannière"></img>}
+            {currentPage === "/A_propos" && (
+                <img src={Banner_about} alt="Bannière"></img>
+            )}
+            <>
+                {currentPage === "/" ? 
+                window.innerWidth < 767 ? <p>Chez vous,<br /> partout et ailleurs</p> : <p>"Chez vous, partout et ailleurs"</p>
+                : null}
+            </>
         </div>
     );
 }
