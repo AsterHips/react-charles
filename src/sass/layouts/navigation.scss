@@ -1,0 +1,21 @@
+nav {
+    & ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+
+        & li a {
+            text-decoration: none;
+            color: #ff6060;
+
+            &:hover {
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
+
+.active {
+    text-decoration-line: underline;
+}

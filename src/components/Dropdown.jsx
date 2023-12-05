@@ -27,13 +27,12 @@ function Dropdown({ dropdownTitle, content, id }) {
 
     return (
         <div className="dropdown" id={id} ref={scrollTo}>
-            <div className="dropdown_title">
+            <div className="dropdown_title" onClick={handleClick}>
                 <h2>{dropdownTitle}</h2>
                 <i
                     className={`fa-solid ${
                         DropIt ? "fa-chevron-up opened" : "fa-chevron-down"
                     }`}
-                    onClick={handleClick}
                 ></i>
             </div>
             {DropIt ? <Content /> : null}

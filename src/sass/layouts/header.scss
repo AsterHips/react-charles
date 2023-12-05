@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    justify-content: space-between;
+
+    & img {
+        height: 68px;
+        width: 210.32px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header {
+        padding: 1rem;
+        margin-bottom: 10px;
+
+        & img {
+            max-height: 46.88px;
+            max-width: 145px;
+        }
+    }
+}
