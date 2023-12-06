@@ -3,7 +3,7 @@ import Banner from "../components/Banner";
 import Gallery from "../components/Gallery";
 
 function Home() {
-    document.title = "Accueil";
+    document.title = "Kasa - Accueil";
     const [apparts, setApparts] = useState([]);
 
     useEffect(() => {

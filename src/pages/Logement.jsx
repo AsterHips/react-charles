@@ -3,12 +3,14 @@ import Tags from "../components/Tags";
 import Stars from "../components/Stars";
 import Dropdown from "../components/Dropdown";
 
-import { useParams } from "react-router";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 function Logement() {
     const [appart, setAppart] = useState(null);
     const id = useParams().id;
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getHouse = async () => {
@@ -23,7 +25,7 @@ function Logement() {
         getHouse();
     }, [id]);
 
-    if (!appart) return <div></div>;
+    if (!appart) return navigate("/Error404");
 
     document.title = appart.title;
 

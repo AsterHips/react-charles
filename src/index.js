@@ -28,6 +28,10 @@ const router = createBrowserRouter([
                 path: "/A_propos",
                 element: <A_propos />,
             },
+            {
+                path: "/Error404",
+                element: <Error404 />,
+            }
         ],
     },
 ]);

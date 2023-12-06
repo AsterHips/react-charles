@@ -1,11 +1,16 @@
 import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
 
+import { useLocation } from "react-router";
+
 function Error404() {
     document.title = "Erreur404";
+
+    const currentPage = useLocation().pathname;
+
     return (
         <>
-            <Header />
+            {currentPage !== "/Error404" ? <Header /> : null}
             <main>
                 <div className="error">
                     <span>404</span>
@@ -13,7 +18,7 @@ function Error404() {
                     <a href="/">Retourner sur la page d'accueil</a>
                 </div>
             </main>
-            <Footer />
+            {currentPage !== "/Error404" ? <Footer /> : null}
         </>
     );
 }
