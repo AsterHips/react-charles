@@ -2,6 +2,7 @@ import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
 
 import { useLocation } from "react-router";
+import { NavLink } from "react-router-dom";
 
 function Error404() {
     document.title = "Erreur404";
@@ -15,7 +16,11 @@ function Error404() {
                 <div className="error">
                     <span>404</span>
                     <p>Oups ! La page que vous demandez n'existe pas.</p>
-                    <a href="/">Retourner sur la page d'accueil</a>
+                    <NavLink
+                        to="/"
+                    >
+                        Retourner sur la page d'accueil
+                    </NavLink>
                 </div>
             </main>
             {currentPage !== "/Error404" ? <Footer /> : null}
